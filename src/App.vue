@@ -1,13 +1,18 @@
-<template lang="">
-  <div>
-    
-  </div>
-</template>
 <script>
+import AppHeader from "./components/AppHeader.vue";
 export default {
-
+  components: {
+    AppHeader
+  }
 }
 </script>
-<style lang="">
-  
-</style>
+<template lang="">
+  <div class="container">
+    <AppHeader></AppHeader>
+  </div>
+</template>
+<style lang="scss" scoped>
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
