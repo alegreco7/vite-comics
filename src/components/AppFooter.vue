@@ -11,7 +11,6 @@ export default {
         </div>
     </div>
     <footer>
-        <div class="top-footer">
         <div class="container">
             <div class="content-footer">
                 <div class="side-footer">
@@ -69,4 +68,5 @@ footer {
         background-color: black;
         height: 100px;
     }
-}</style>
+}
+</style>
