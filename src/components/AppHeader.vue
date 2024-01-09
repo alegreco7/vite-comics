@@ -4,29 +4,62 @@ export default {
 }
 </script>
 <template lang="">
-    <header>
-        <div class="logo">
-            <img src="../assets/img/dc-logo.png" alt="logo">
-        </div>
-        <div class="nav-list">
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="../assets/img/dc-logo.png" alt="logo">
+            </div>
+            <div class="nav-list">
 
-        </div>
-    </header>
+                <ul>
+                    <li>CHARACTERS</li>
+                    <li class="active">COMICS</li>
+                    <li>MOVIES</li>
+                    <li>TV</li>
+                    <li>GAMES</li>
+                    <li>COLLECTIBLES</li>
+                    <li>VIDEOS</li>
+                    <li>FANS</li>
+                    <li>NEWS</li>
+                    <li>SHOP</li>
+                </ul>
+            </div>
+        </header>
+    </div>
 </template>
 <style lang="scss" scoped>
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
 
-    .logo img {
-        width: 50px;
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo img {
+            width: 80px;
+        }
+
+        .nav-list {
+            ul {
+                list-style: none;
+                display: flex;
+
+                li {
+                    padding: 50px 0;
+                    font-size: 14px;
+                    margin: 0 10px;
+                    font-weight: 600;
+
+                }
+
+                li.active {
+                    color: blue;
+                    border-bottom: 3px solid blue;
+                }
+            }
+        }
     }
 
-    .nav-list {
-        width: 900px;
-        height: 50px;
-        background-color: yellow;
-    }
-}
-</style>
+}</style>
