@@ -101,15 +101,26 @@ export default {
                     "series": "Catwoman",
                     "type": "graphic novel",
                 },
-            ]
+            ],
+            currentComic: null
         }
+    },
+    methods: {
+        setCurrentComic(i) {
+            this.currentComic = null;
+            this.currentComic = i;
+        },
     },
 }
 </script>
 <template lang="">
     <main>
         <div class="container">
-            <h2> --> Content goes here <-- </h2>
+            <div class="current" v-text="currentComic ? comics[currentComic].series : 'CURRENT SERIES'">
+            </div>
+            <div class="comics">
+                <AppComic v-for="(comic, index) in comics" :key="index" :comic_obj="comic" @click="setCurrentComic(index)"/>
+            </div>
         </div>
     </main>
     <div class="blu-list">
@@ -126,7 +137,8 @@ export default {
     </div>
 </template>
 <style lang="scss" scoped>
-@use '../styles/variables.scss' as *;
+@use '../styles/generals.scss';
+@use '../styles/partials/variables' as *;
 
 .container {
     max-width: 1200px;
@@ -134,11 +146,23 @@ export default {
 }
 
 main {
+    position: relative;
     background-color: black;
 
-    h2 {
-        padding: 50px 0;
-        color: white;
+    .current {
+        position: absolute;
+        top: -20px;
+        background-color: $primary;
+        padding: 10px 20px;
+        font-size: 20px;
+        font-weight: 600;
+        color: $white;
+    }
+
+    .comics {
+        padding: 40px 0;
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
@@ -169,5 +193,4 @@ main {
             }
         }
     }
-}
-</style>
+}</style>

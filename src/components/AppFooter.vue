@@ -4,34 +4,6 @@ export default {
 }
 </script>
 <template lang="">
-    <div class="blu-list">
-        <div class="container">
-            <div class="list">
-                <ul>
-                    <li>
-                        <img src="../assets/img/buy-comics-digital-comics.png" alt="comics">
-                        DIGITAL COMICS
-                    </li>
-                    <li>
-                        <img src="../assets/img/buy-comics-merchandise.png" alt="comics">
-                        DC MERCHANDISE
-                    </li>
-                    <li>
-                        <img src="../assets/img/buy-comics-subscriptions.png" alt="comics">
-                        SUBSCRIPTIO
-                    </li>
-                    <li>
-                        <img src="../assets/img/buy-comics-shop-locator.png" alt="comics">
-                        COMIC SHOP LOCATOR
-                    </li>
-                    <li>
-                        <img src="../assets/img/buy-dc-power-visa.svg" alt="comics">
-                        DC POWER VISA
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
     <footer>
         <div class="container">
             <div class="content-footer">
@@ -111,38 +83,12 @@ export default {
     </footer>
 </template>
 <style lang="scss" scoped>
+@use '../styles/generals.scss';
+@use '../styles/partials/variables' as *;
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.blu-list {
-    background-color: rgb(15, 159, 255);
-    width: 100%;
-
-    .list {
-        ul {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            list-style: none;
-
-            li {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                margin: 40px 30px;
-                color: #fff;
-
-                img {
-                    max-width: 50px;
-                    height: 50px;
-                }
-
-                font-size: 14px;
-            }
-        }
-    }
 }
 
 footer {
@@ -155,7 +101,7 @@ footer {
         .lists-group {
             display: flex;
             padding: 30px 0;
-            color: #fff;
+            color: $white;
 
             ul {
                 margin: 10px 0;
@@ -178,19 +124,20 @@ footer {
 
         .btn {
             padding: 10px;
-            color: #fff;
-            border: 2px solid rgb(15, 159, 255);
+            color: $white;
+            border: 2px solid $primary;
         }
 
         .side-footer {
             display: flex;
             align-items: center;
             gap: 20px;
-            color: rgb(15, 159, 255);
+            color: $primary;
 
             .icons img {
                 margin: 0 5px;
             }
         }
     }
+
 }</style>
