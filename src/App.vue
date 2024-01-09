@@ -9,13 +9,19 @@ export default {
 }
 </script>
 <template lang="">
-  <div class="container">
-    <AppHeader></AppHeader>
-    <AppFooter></AppFooter>
-  </div>
+  <AppHeader></AppHeader>
+  <main>
+    <h2>--> Content goes here<--</h2>
+  </main>
+  <AppFooter></AppFooter>
 </template>
 <style lang="scss" scoped>
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+main {
+  background-color: black;
+
+  h2 {
+    padding: 50px 0;
+    color: white;
+  }
 }
+</style>

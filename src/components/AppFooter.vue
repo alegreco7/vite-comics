@@ -5,11 +5,13 @@ export default {
 </script>
 <template lang="">
     <div class="blu-list">
+
         <div class="container">
 
         </div>
     </div>
     <footer>
+        <div class="top-footer">
         <div class="container">
             <div class="content-footer">
                 <div class="side-footer">
@@ -20,10 +22,11 @@ export default {
             </div>
         </div>
         <div class="bottom-footer">
+
             <div class="container">
                 <div class="content-footer">
                     <div class="side-footer">
-    
+
                     </div>
                     <div class="side-footer">
                     </div>
@@ -66,5 +69,4 @@ footer {
         background-color: black;
         height: 100px;
     }
-
 }</style>
